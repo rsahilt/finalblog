@@ -1,0 +1,404 @@
+*{
+	margin: 0 ;
+	padding: 0;
+}
+body{
+	/*background-color: #e8f1f1;*/
+	background-color: white;
+}
+/*--------------------------------------------------------css for header background*/
+.banner{
+	/*background: url(images/headerimage.jpg);*/
+/*	background-color: darkred;*/
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	margin: auto;
+	padding: 0;
+	/*float: left;*/
+	position: relative;
+}
+.mySlides{
+	position: absolute;
+	width: 100%;
+	/*display: none;*/
+	/*margin: auto;*/
+}
+.prev, .next{
+	cursor: pointer;
+	color: black;
+	position: absolute;
+	font-weight: bolder;
+	top: 50%;
+	margin-top: -40px;
+	padding: 20px;
+	transition: 0.6s ease;
+	font-size: 18px;
+	user-select: none;
+	color: white;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.dot{
+	cursor: pointer;
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	background-color: #bbb;
+	border-radius: 50%;
+	margin: 7px 2px 20px 2px;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* PRODUCTS */
+.blog-section {
+	margin: 0 auto;
+	padding: 0;
+  position: relative;
+  overflow: hidden;
+ /* padding: 20px;*/
+}
+
+.blog-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.slider-container {
+ /* padding: 0 10vw;*/
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin: 0 7% 2% 7%;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.content-card {
+  flex: 0 0 auto;
+  width: 230px;
+  height: 350px;
+  margin-right: 40px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+
+.content-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.content-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px;
+  width: 80%;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.content-card:hover .card-btn {
+  opacity: 1;
+}
+
+.card-btn:hover {
+  background: #ff7d7d;
+  color: #fff;
+}
+
+.content-info {
+  width: 100%;
+  margin: 0 3%;
+  padding: 0;
+}
+
+.content-title {
+  /*text-transform: uppercase;*/ 
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  min-height: 35px;
+}
+
+.content-short-description {
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  opacity: 0.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.collection-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.collection {
+  position: relative;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+  grid-column: span 2;
+  margin-bottom: 10px;
+}
+/*----------------------------------------------------------------------------footer styling*/
+footer{
+	margin-top: 4%;
+	width: 100%;
+	float: left;
+	height: 400px;
+	background-color: #191919;
+	color: white;
+	/*margin-top: 5%;*/
+}
+.footer-details{
+	width: 100%;
+	height: 90%;
+	float: left;
+	background-color: #323232;
+}
+.footer-conts{
+	width: 30%;
+	float: left;
+	/*background-color: green;*/
+	justify-content: space-between;
+	height: 96%;
+	margin: 1%;
+}
+.footer-conts p{
+	font-family: 'Roboto Flex', sans-serif;
+	color: white;
+	letter-spacing: 0.07em;
+	padding-left: 20%;
+	font-size: 18px;
+	padding-top: 5%;
+}
+.footer-conts article{
+	padding-top: 4%;
+	padding-left: 20%;
+	font-family: 'Roboto Flex', sans-serif;
+	color: #d8d8d8;
+}
+.footer-conts .email-article
+{
+	/*padding-left: 20%;*/
+	font-family: 'Roboto Flex', sans-serif;
+	font-weight: bold;
+	color: white;
+}
+.hr1{
+	display: none;
+}
+
+/*---------------------------------------------------css for social media icons*/
+.medias{
+	width: 100%;
+	float: left;
+	margin-top: 4%;
+	/*background-color: blue;*/
+}
+.medias ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: center;
+	padding-left: 16%;
+}
+.medias ul li{
+	margin: 0;
+	display: inline-block;
+	padding-top: 1%;
+	padding-right: 1%;
+}
+/*----------------------------------------------------------------bottom copyright section div*/
+.copyright-sec
+{
+	width: 100%;
+	height: 10%;
+	float: left;
+	background-color: #191919;
+}
+.copyright-sec p
+{
+	font-family: 'Roboto Flex', sans-serif;
+	text-align: center;
+	padding: 0.6%;
+	color: #d8d8d8;
+}
+.footer-conts article a{
+	text-decoration: none;
+	font-family: 'Roboto Flex', sans-serif;
+	color: #d8d8d8;
+}
+.footer-conts article a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 16px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook{
+  /*background: #3B5998;*/
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  /*background: #55ACEE;*/
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+ /* background: #55ACEE;*/
+  color: white;
+}
+#genres{
+float: right; padding: 1%; margin: 1% 2% 0 0; background-color:#f2f2f2;}
+
+/*------------------------------------------------------------------media queries for mobile and ipad views*/
+
+@media only screen and (max-width: 600px) {
+ .banner, .dot{
+ 	display: none;
+ }
+ 
+footer{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+.footer-details{
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+.footer-conts{
+	float: left;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+.copyright-sec{
+	width: 100%:;
+	padding: 1% 0;
+}
+
+.hr1{
+	display: flex;
+}
+}
